@@ -2,9 +2,11 @@
 
 <div *ngIf="filteredData">
     <div *ngFor="let user of filteredData">
-      <p>Username: {{ user.name }}</p>
+      <p>First Name: {{ user.firstName }}</p>
+      <p>Last Name: {{ user.lastName }}</p>
       <p>Password: {{ user.password }}</p>
       <hr>
     </div>
   </div>
+  
   

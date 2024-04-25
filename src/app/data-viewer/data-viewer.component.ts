@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { last } from 'rxjs';
 
 @Component({
   selector: 'app-data-viewer',
@@ -22,7 +23,8 @@ export class DataViewerComponent implements OnInit {
       this.data = response;
       this.filteredData = this.data.users.map(user => ({
         id: user.id,
-        name: `${user.firstName} ${user.lastName}`,
+        firstName: user.firstName,
+        lastName: user.lastName,
         password: user.password
       }));
     });
