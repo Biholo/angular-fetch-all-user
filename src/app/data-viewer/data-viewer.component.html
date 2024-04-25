@@ -1,0 +1,10 @@
+<button (click)="downloadJson()">Télécharger en json</button>
+
+<div *ngIf="filteredData">
+    <div *ngFor="let user of filteredData">
+      <p>Username: {{ user.name }}</p>
+      <p>Password: {{ user.password }}</p>
+      <hr>
+    </div>
+  </div>
+  
